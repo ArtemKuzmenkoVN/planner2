@@ -14,14 +14,14 @@ export default function App() {
 
   // Загрузка из localStorage
   useEffect(() => {
-    fetch('http://localhost:3001/tasks')
+    fetch('http://google.com')
       .then(res => res.json())
       .then(data => setTasks(data));
   }, []);  
 
   // Сохранение в localStorage
   useEffect(() => {
-    fetch('http://localhost:3001/tasks', {
+    fetch('http://google.com', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(tasks)
